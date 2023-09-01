@@ -88,8 +88,19 @@
             --tw-space-y-reverse: 0;
             margin-top: calc(0.5rem/* 8px */ * calc(1 - var(--tw-space-y-reverse)));
             margin-bottom: calc(0.5rem/* 8px */ * var(--tw-space-y-reverse));
-
         }
+        .app_container_bingo{
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding-top: 0.25rem/* 4px */;
+            padding-bottom: 0.25rem/* 4px */;
+            --tw-space-y-reverse: 0;
+            margin-top: calc(0.5rem/* 8px */ * calc(1 - var(--tw-space-y-reverse)));
+            margin-bottom: calc(0.5rem/* 8px */ * var(--tw-space-y-reverse));
+        }
+
         .app__first_col{
             width: 100%;
             display: flex;
@@ -214,6 +225,9 @@
             margin-top: 1.75rem/* 28px */;
             margin-bottom: 1.75rem/* 28px */;
         }
+        .app_seperator_bingo{
+            display: none;
+        }
 
 
         @media (min-width: 768px) {
@@ -228,11 +242,15 @@
                 line-height: 2.25rem/* 36px */ !important;
                 
             }
-            .app_container{
+            .app_container, .app_container_bingo{
                 flex-direction: row;
                 --tw-space-y-reverse: 0;
                 margin-top: calc(0px * calc(1 - var(--tw-space-y-reverse)));
                 margin-bottom: calc(0px * var(--tw-space-y-reverse));
+            }
+            .app_container_bingo{
+                display: flex;
+
             }
             .app__first_col{
                 width: 40%;
@@ -255,13 +273,12 @@
             .app__third_col__wrap{
                 margin-bottom: .5px;
             }
+            .app_seperator_bingo{
+                display: flex;
+                margin-top: 1.75rem/* 28px */;
+                margin-bottom: 1.75rem/* 28px */;
+            }
         }
-
-        /*
-        https://i.postimg.cc/8CtCMXPs/ia-Vgvng0-400x400-1.png
-        
-        */
-        
     </style>
 
     <title>MeiggsMedia</title>
@@ -317,7 +334,7 @@
                 </div>
             </div>
             <hr class="app_seperator">
-            <div class="app_container">
+            <div class="app_container_bingo">
                 <div class="app__first_col">
                     <img class="app__first_col__img" src="https://i.postimg.cc/8kqL7c09/246x0w-1.png" onclick="window.open(`https://www.pubtrack.co/cmp/2J7JPH/5QBKQN/?source_id=smarts&sub1=smarts`, '_blank')" alt="logo1">
                     <div class="app__first_col__text_wrap">
@@ -357,7 +374,7 @@
                     <p class="app__third_col__rate">Smarts Rating</p>
                 </div>
             </div>
-            <hr class="app_seperator">
+            <hr class="app_seperator_bingo">
             <div class="app_container">
                 <div class="app__first_col">
                     <img class="app__first_col__img" src="https://i.postimg.cc/8CtCMXPs/ia-Vgvng0-400x400-1.png" onclick="window.open(`https://arrivedhomes.go2cloud.org/aff_c?offer_id=1&aff_id=1007&aff_sub=smarts`, '_blank')" alt="logo1">
