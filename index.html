@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdn.tailwindcss.com"></script>
+    <!--<script src="https://cdn.tailwindcss.com"></script>-->
     <style>
         @font-face {
             font-family: 'SilkaBold';
@@ -20,41 +20,275 @@
         p {
             font-family: 'SilkaMedium', sans-serif;
         }
+        .main__container{
+            min-height: 100vh;
+            width: 100%;
+            --tw-bg-opacity: 1;
+            background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding-left: 0.75rem/* 12px */;
+            padding-right: 0.75rem/* 12px */;
+            padding-top: 1.25rem/* 20px */;
+            padding-bottom: 1.25rem/* 20px */;
+        }
+        .child__container{
+            max-width: 48rem;
+            width: 100%;
+            --tw-border-opacity: 1;
+            border-color: rgb(44 113 240 / var(--tw-border-opacity));
+            border-style: solid;
+            border-width: 1px;
+            border-top-width: 10px;
+            border-radius: 0.5rem/* 8px */;
+            padding-top: 2.5rem/* 40px */;
+            padding-bottom: 2.5rem/* 40px */;
+            padding-left: 2rem/* 32px */;
+            padding-right: 2rem/* 32px */;
+        }
+        .main__heading{
+            font-family: 'SilkaBold', sans-serif;
+            --tw-text-opacity: 1;
+            color: rgb(0 0 0 / var(--tw-text-opacity));
+            font-weight: 700;
+            font-size: 2.25rem/* 36px */ !important;
+            line-height: 2.5rem/* 40px */ !important;
+            margin-bottom: 0.5rem/* 8px */;
+        }
+        .main__heading__span1{
+            display: flex;
+        }
+        .main__heading__span2{
+            display: none;
+        }
+        .main__description{
+            --tw-text-opacity: 1;
+            color: rgb(84 84 84 / var(--tw-text-opacity));
+            font-size: 1rem/* 16px */ !important;
+            line-height: 1.5rem/* 24px */ !important;
+            margin-bottom: 1.75rem/* 28px */ !important;
+        }
+        .main__description__span1{
+            font-weight: 700;
+            display: inline;
+        }
+        .main__description__span2{
+            display: inline;
+        }
+        .app_container{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding-top: 0.25rem/* 4px */;
+            padding-bottom: 0.25rem/* 4px */;
+            --tw-space-y-reverse: 0;
+            margin-top: calc(0.5rem/* 8px */ * calc(1 - var(--tw-space-y-reverse)));
+            margin-bottom: calc(0.5rem/* 8px */ * var(--tw-space-y-reverse));
+
+        }
+        .app__first_col{
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            margin-bottom: 8px !important;
+
+        }
+        .app__first_col__img{
+            width: 70px;
+            height: 70px;
+            border-radius: 0.5rem/* 8px */;
+            cursor: pointer;
+            margin-bottom: 0px !important;
+            margin-right: 12px;
+        }
+        .app__first_col__text_wrap{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+
+        }
+        .app__first_col__text_wrap__div{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+        }
+        .app__first_col__text_wrap__div :nth-child(1){
+            margin-bottom: 4px;
+        }
+        .appTitle{
+            --tw-text-opacity: 1 !important;
+            color: rgb(21 53 122 / var(--tw-text-opacity)) !important;
+            font-weight: 600;
+            font-size: 1.5rem/* 24px */ !important;
+            line-height: 2rem/* 32px */ !important;
+            text-decoration: none;
+
+        }
+        .app__first_col__text_wrap__div__rate{
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+            align-items: center;
+            
+        }
+        .app__first_col__text_wrap__div__rate__a{
+            font-size: 1.25rem/* 20px */ !important;
+            line-height: 1.75rem/* 28px */ !important;
+            --tw-text-opacity: 1 !important;
+            color: rgb(44 113 240 / var(--tw-text-opacity)) !important;
+            text-decoration-line: underline !important;
+            font-weight: 500 !important;
+            margin-bottom: 0px !important;
+            margin-right: 8px;
+        }
+        .app__first_col__text_wrap__div__rate__a2{
+            --tw-text-opacity: 1 !important;
+            color: rgb(44 113 240 / var(--tw-text-opacity)) !important;
+            font-size: 0.75rem/* 12px */;
+            line-height: 1rem/* 16px */;
+
+            text-decoration-line: underline !important;
+            margin-bottom: 0px !important;
+        }
+        .app__first_col__text_wrap__div__check{
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+
+        }
+        .app__second_col{
+            width: 100%;
+        }
+        .app__second_col__p{
+            font-size: 0.875rem/* 14px */ !important;
+            line-height: 1.25rem/* 20px */ !important;
+            margin-bottom: 0px !important;
+            margin-top: 0 !important;
+
+        }
+        .app__second_col__p__a{
+            --tw-text-opacity: 1;
+            color: rgb(44 113 240 / var(--tw-text-opacity));
+            text-decoration-line: underline !important;
+            
+
+        }
+        .app__third_col{
+            width: 15%;
+            display: none;
+            flex-direction: column !important;
+            justify-content: center !important;
+            align-items: flex-end !important;
+
+        }
+        .app__third_col__wrap{
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+            align-items: center;
+            margin-bottom: 0 !important;
+            margin-right: 8px !important;
+        }
+        .app__third_col__wrap__a{
+            font-size: 1.875rem/* 30px */ !important;
+            line-height: 2.25rem/* 36px */ !important;
+            --tw-text-opacity: 1 !important;
+            color: rgb(44 113 240 / var(--tw-text-opacity)) !important;
+            text-decoration-line: underline !important;
+            font-weight: 500 !important;
+            margin-bottom: 0px !important;
+            margin-right: 8px;
+        }
+        .app__third_col__rate{
+            font-size: 0.75rem/* 12px */ !important;
+            line-height: 1rem/* 16px */ !important;
+        }
+        .app_seperator{
+            margin-top: 1.75rem/* 28px */;
+            margin-bottom: 1.75rem/* 28px */;
+        }
+
+
+        @media (min-width: 768px) {
+            .main__heading__span1, .main__description__span2, .app__first_col__text_wrap__div__rate, .app__first_col__text_wrap__div__check {
+                display: none;
+            }
+            .main__heading__span2{
+                display: flex;
+            }
+            .appTitle{
+                font-size: 1.875rem/* 30px */ !important;
+                line-height: 2.25rem/* 36px */ !important;
+                
+            }
+            .app_container{
+                flex-direction: row;
+                --tw-space-y-reverse: 0;
+                margin-top: calc(0px * calc(1 - var(--tw-space-y-reverse)));
+                margin-bottom: calc(0px * var(--tw-space-y-reverse));
+            }
+            .app__first_col{
+                width: 40%;
+                margin-bottom: 0 !important;
+            }
+            .app__second_col{
+                width: 45%;
+            }
+            .app__second_col__p{
+                padding-left: 1.5rem/* 24px */;
+                padding-right: 1.5rem/* 24px */;
+            }
+            .app__first_col__text_wrap__div__rate__a2{
+                font-size: 0.875rem/* 14px */ !important;
+                line-height: 1.25rem/* 20px */ !important;
+            }
+            .app__third_col{
+                display: flex;
+            }
+            .app__third_col__wrap{
+                margin-bottom: .5px;
+            }
+        }
+
         /*
         https://i.postimg.cc/8CtCMXPs/ia-Vgvng0-400x400-1.png
         https://i.postimg.cc/8kqL7c09/246x0w-1.png
         */
+        
     </style>
-    <!--<script src="index.js"></script>-->
 
     <title>MeiggsMedia</title>
 </head>
 <body>
-    <div class="min-h-screen w-full bg-white flex items-center justify-center px-3 py-5">
-        <div class="max-w-3xl w-full border-[#2c71f0] border-solid border-[1px] border-t-[10px] rounded-lg py-10 px-8">
-            <h1 class="text-black font-bold !text-4xl mb-2">
-                <span class="flex md:hidden">Make $100 or more this week!</span>
-                <span class="hidden md:flex">Our Favourite Earners</span>
+    <div class="main__container ">
+        <div class="child__container">
+            <h1 class="main__heading">
+                <span class="main__heading__span1">Make $100 or more this week!</span>
+                <span class="main__heading__span2">Our Favourite Earners</span>
             </h1>
-            <p class="text-[#545454] !text-base !md:text-xl !mb-7">
-                Check out the list below for <span class="font-bold inline">quick and easy ways of making money</span>, all verified by us<span class="inline md:hidden">. Click on the links to learn more</span>!
+            <p class="main__description">
+                Check out the list below for <span class="main__description__span1">quick and easy ways of making money</span>, all verified by us<span class="main__description__span2">. Click on the links to learn more</span>!
             </p>
-            <div class="flex flex-col md:flex-row items-center justify-center py-1 space-y-2 md:space-y-0">
-                <div class="w-full md:w-2/5 flex flex-row space-x-3 ">
-                    <img class="w-[70px] h-[70px] rounded-lg cursor-pointer !mb-0" src="https://i.postimg.cc/MHjKkW0j/Kashkick-logo-1.png" onclick="window.open(`https://kashkick.go2cloud.org/aff_c?offer_id=608&aff_id=1198&aff_sub=smarts&aff_sub2=a`, '_blank')" alt="logo1">
-                    <div class="w-full flex flex-col justify-start items-start space-y-1">
-                        <div class="w-full flex justify-between">
-                            <a href="https://kashkick.go2cloud.org/aff_c?offer_id=608&aff_id=1198&aff_sub=smarts&aff_sub2=a" target="_blank" class="appTitle !text-[#15357a] font-semibold !text-3xl">KashKick</a>
-                            <div class="flex md:hidden flex-row justify-end items-center space-x-2">
-                                <a href="https://kashkick.go2cloud.org/aff_c?offer_id=608&aff_id=1198&aff_sub=smarts&aff_sub2=a" target="_blank" class="!text-xl !text-[#2c71f0] !underline !font-medium !mb-0">9.5</a>
+            <div class="app_container">
+                <div class="app__first_col">
+                    <img class="app__first_col__img" src="https://i.postimg.cc/MHjKkW0j/Kashkick-logo-1.png" onclick="window.open(`https://kashkick.go2cloud.org/aff_c?offer_id=608&aff_id=1198&aff_sub=smarts&aff_sub2=a`, '_blank')" alt="logo1">
+                    <div class="app__first_col__text_wrap">
+                        <div class="app__first_col__text_wrap__div">
+                            <a href="https://kashkick.go2cloud.org/aff_c?offer_id=608&aff_id=1198&aff_sub=smarts&aff_sub2=a" target="_blank" class="appTitle">KashKick</a>
+                            <div class="app__first_col__text_wrap__div__rate">
+                                <a href="https://kashkick.go2cloud.org/aff_c?offer_id=608&aff_id=1198&aff_sub=smarts&aff_sub2=a" target="_blank" class="app__first_col__text_wrap__div__rate__a">9.5</a>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="12" height="14" viewBox="0 0 97 93" fill="none">
                                     <path d="M43.2832 3.04784C45.9166 -0.794583 51.5872 -0.794578 54.2206 3.04785L66.9035 21.5537C67.7656 22.8116 69.0349 23.7338 70.4976 24.165L92.017 30.5085C96.4851 31.8257 98.2374 37.2187 95.3968 40.9106L81.7159 58.6914C80.786 59.9 80.3011 61.3922 80.3431 62.9165L80.9599 85.3429C81.088 89.9994 76.5003 93.3325 72.1113 91.7718L50.9732 84.255C49.5364 83.7441 47.9674 83.7441 46.5306 84.255L25.3924 91.7718C21.0035 93.3325 16.4158 89.9994 16.5439 85.3429L17.1607 62.9165C17.2026 61.3922 16.7178 59.9 15.7879 58.6914L2.10696 40.9106C-0.733646 37.2187 1.01867 31.8257 5.4868 30.5085L27.0062 24.165C28.4689 23.7338 29.7382 22.8116 30.6003 21.5537L43.2832 3.04784Z" fill="#2c71f0"/>
                                 </svg>
                             </div>
                         </div>
-                        <div class="w-full flex justify-between">
-                            <a href="https://kashkick.go2cloud.org/aff_c?offer_id=608&aff_id=1198&aff_sub=smarts&aff_sub2=a" target="_blank" class="!text-[#2c71f0] !text-sm !underline !mb-0">46,212 App Store Reviews</a>
-                            <div class="flex md:hidden justify-end items-center space-x-2">
+                        <div class="app__first_col__text_wrap__div">
+                            <a href="https://kashkick.go2cloud.org/aff_c?offer_id=608&aff_id=1198&aff_sub=smarts&aff_sub2=a" target="_blank" class="app__first_col__text_wrap__div__rate__a2">46,212 App Store Reviews</a>
+                            <div class="app__first_col__text_wrap__div__check">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 38 36" fill="none">
                                     <path d="M12.7368 16.3159L18.1052 21.6843L36 3.78955" stroke="#009733" stroke-width="3.16279" stroke-linecap="round" stroke-linejoin="round"/>
                                     <path d="M34.2105 18.1053V30.6316C34.2105 31.5808 33.8335 32.4911 33.1623 33.1623C32.4911 33.8335 31.5808 34.2105 30.6316 34.2105H5.57895C4.62975 34.2105 3.71943 33.8335 3.04825 33.1623C2.37707 32.4911 2 31.5808 2 30.6316V5.57895C2 4.62975 2.37707 3.71943 3.04825 3.04825C3.71943 2.37707 4.62975 2 5.57895 2H25.2632" stroke="#009733" stroke-width="3.16279" stroke-linecap="round" stroke-linejoin="round"/>
@@ -64,22 +298,22 @@
                         
                     </div>
                 </div>
-                <div class="w-full md:w-[45%]">
-                    <p class="!text-sm md:px-6 !mb-0">
-                        Earn cash at home or on the go. KashKick pays you for <a href="https://kashkick.go2cloud.org/aff_c?offer_id=608&aff_id=1198&aff_sub=smarts&aff_sub2=a" target="_blank" class="text-[#2c71f0] !underline">playing games, taking surveys, and more!</a>
+                <div class="app__second_col">
+                    <p class="app__second_col__p">
+                        Earn cash at home or on the go. KashKick pays you for <a href="https://kashkick.go2cloud.org/aff_c?offer_id=608&aff_id=1198&aff_sub=smarts&aff_sub2=a" target="_blank" class="app__second_col__p__a">playing games, taking surveys, and more!</a>
                     </p>
                 </div>
-                <div class="w-[15%] hidden md:flex !flex-col !justify-center !items-end !space-x-2 !space-y-0 !md:space-y-[.5px]">
-                    <div class="flex flex-row justify-end items-center space-x-2">
-                        <a href="https://kashkick.go2cloud.org/aff_c?offer_id=608&aff_id=1198&aff_sub=smarts&aff_sub2=a" target="_blank" class="!text-3xl !text-[#2c71f0] underline !font-medium !mb-0">9.5</a>
+                <div class="app__third_col">
+                    <div class="app__third_col__wrap">
+                        <a href="https://kashkick.go2cloud.org/aff_c?offer_id=608&aff_id=1198&aff_sub=smarts&aff_sub2=a" target="_blank" class="app__third_col__wrap__a">9.5</a>
                         <svg xmlns="http://www.w3.org/2000/svg" width="26" height="24" viewBox="0 0 97 93" fill="none">
                             <path d="M43.2832 3.04784C45.9166 -0.794583 51.5872 -0.794578 54.2206 3.04785L66.9035 21.5537C67.7656 22.8116 69.0349 23.7338 70.4976 24.165L92.017 30.5085C96.4851 31.8257 98.2374 37.2187 95.3968 40.9106L81.7159 58.6914C80.786 59.9 80.3011 61.3922 80.3431 62.9165L80.9599 85.3429C81.088 89.9994 76.5003 93.3325 72.1113 91.7718L50.9732 84.255C49.5364 83.7441 47.9674 83.7441 46.5306 84.255L25.3924 91.7718C21.0035 93.3325 16.4158 89.9994 16.5439 85.3429L17.1607 62.9165C17.2026 61.3922 16.7178 59.9 15.7879 58.6914L2.10696 40.9106C-0.733646 37.2187 1.01867 31.8257 5.4868 30.5085L27.0062 24.165C28.4689 23.7338 29.7382 22.8116 30.6003 21.5537L43.2832 3.04784Z" fill="#2c71f0"/>
                         </svg>
                     </div>
-                    <p class="!text-xs">Smarts Rating</p>
+                    <p class="app__third_col__rate">Smarts Rating</p>
                 </div>
             </div>
-            <hr class="my-7">
+            <hr class="app_seperator">
             
     </div>
 </body>
